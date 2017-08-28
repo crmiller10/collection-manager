@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Edit Car</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="/main.css">
+  </head>
+  <body>
+    <h1>Edit Car</h1>
+    <div class="wrapper">
+    {{#auto}}
+      <div id="update">
+        <table id="update-table">
+          <form action="/edit/{{_id}}" method="post">
+            <tr>
+              <td>
+              <label for="year">Year</label><br>
+              <input type="text" name="year" id="year" value="{{year}}">
+              </td>
+              <td>
+                <label for="make">Make</label><br>
+                <input type="text" name="make" id="make" value="{{make}}" required>
+              </td>
+              <td>
+                <label for="model">Model</label><br>
+                <input type="text" name="model" id="model" value="{{model}}" required>
+              </td>
+            </tr>
+             <tr>
+              <td>
+                <label for="body.bodyStyle">Body Style</label><br>
+                <select name="body.bodyStyle" id="body.bodyStyle" >
+                  <option value="{{body.bodyStyle}}" selected>{{body.bodyStyle}}</option>
+                  <option value=""></option>
+                  <option value="sedan">Sedan</option>
+                  <option value="coupe">Coupe</option>
+                  <option value="suv">SUV</option>
+                  <option value="crossover">Crossover</option>
+                  <option value="convertible">Convertible</option>
+                  <option value="truck">Truck</option>
+                  <option value="Van">van</option>
+                </select>
+              </td>
+               <td>
+                <label for="body.color">Color</label><br>
+                <input type="text" name="body.color" id="body.color" value="{{body.color}}">
+              </td>
+              <td>
+                <label for="condition">Condition</label><br>
+                <select name="condition" id="condition" >
+                  <option value="{{condition}}" selected>{{condition}}</option>
+                  <option value=""></option>
+                  <option value="new">New</option>
+                  <option value="refurbished">Refurbished</option>
+                  <option value="used-likeNew">Used - Like New</option>
+                  <option value="used-veryGood">Used - Very Good</option>
+                  <option value="used-good">Used - Good</option>
+                  <option value="used-acceptable">Used - Acceptable</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <br>
+                <input type="submit" value="Save Changes">
+              </td>
+          </form>
+          <form action="/" method="get">
+              <td>
+                <br>
+                <input type="submit" value="Cancel">
+              </td>
+            </tr>
+          </form>
+        </table>
+      </div>
+    {{/auto}}
+    </div>
+  </body>
+</html>

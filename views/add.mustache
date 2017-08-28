@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Add Car</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/main.css">
+</head>
+  <body>
+    <main>
+    <h2>Add Car</h2>
+      <div class="wrapper">
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr >
+                <th>Year</th>
+                <th>Make</th>
+                <th>Modal</th>
+                <th>Body Style</th>
+                <th>Color</th>
+                <th>Condition</th>
+              </tr>
+            </thead>
+              <form action="/add" method="post">
+            <tbody>
+              <tr>
+                <td>
+                  <div class="">
+                    <input type="text" name="year" id="year" autofocus>
+                  </div>
+                </td>
+                <td>
+                  <input type="text" name="make" id="make" required>
+                </td>
+                <td>
+                  <input type="text" name="model" id="model" required>
+                </td>
+                <td>
+                  <select name="body.bodyStyle" id="body.bodyStyle">
+                    <option value="" selected></option>
+                    <option value="sedan">Sedan</option>
+                    <option value="coupe">Coupe</option>
+                    <option value="suv">SUV</option>
+                    <option value="crossover">Crossover</option>
+                    <option value="convertible">Convertible</option>
+                    <option value="truck">Truck</option>
+                    <option value="Van">van</option>
+                  </select>
+                </td>
+                <td>
+                  <input type="text" name="body.color" id="body.color">
+                </td>
+                <td>
+                  <select name="condition" id="condition">
+                    <option value=""></option>
+                    <option value="new">New</option>
+                    <option value="refurbished">Refurbished</option>
+                    <option value="used-likeNew">Used - Like New</option>
+                    <option value="used-veryGood">Used - Very Good</option>
+                    <option value="used-good">Used - Good</option>
+                    <option value="used-acceptable">Used - Acceptable</option>
+                  </select>
+                </td>
+                <td>
+                  <div class="form-button">
+                    <input type="submit" value="Add">
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            </form>
+          </table>
+        </div>
+         <form action="/" method="get">
+          <a href="/" class="btn btn-primary" type="button" value="Cancel">
+            Cancel
+          </a>
+          </div>
+        </form>
+    </main>
+  </body>
+</html>

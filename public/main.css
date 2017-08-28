@@ -1,0 +1,91 @@
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 10px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: "Roboto", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #fff;
+  margin: 0;
+  color: #333;
+}
+
+main {
+  padding: 0 20px 60px 20px;
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+h1 {
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 3.5em;
+    text-align: center;
+}
+h2 {
+    font-size: 2em;
+    text-align: center;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.table-responsive {
+  min-height: .01%;
+  overflow-x: auto;
+}
+.table-responsive {
+  border: 1px solid #ddd;
+  border-top: none;
+}
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 0;
+}
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+  padding: 8px;
+  text-transform: capitalize;
+}
+
+.table th {
+  text-align: left;
+}

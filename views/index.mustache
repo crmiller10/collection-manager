@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Car Collection</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/main.css">
+  </head>
+  <body>
+    <main>
+      <h2>Car Collection</h2>
+      <div class="wrapper">
+
+        <div class="table-responsive">
+          <table id="" class="table">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Body Style</th>
+                <th>Color</th>
+                <th>Condition</th>
+                <th colspan="2"><a href="/add" class="btn btn-add" type="button">Add a Car</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#autos}}
+              <tr>
+                <td>{{year}}</td>
+                <td>{{make}}</td>
+                <td>{{model}}</td>
+                <td>{{body.bodyStyle}}</td>
+                <td>{{body.color}}</td>
+                <td>{{condition}}</td>
+                <td>
+                  <div class="button-group" role="group" aria-label="...">
+                    <a href="/edit/{{_id}}" class="btn btn-edit" type="button">Update</a>
+                    <a href="/delete/{{_id}}" class="btn btn-delete" type="button">Delete</a>
+                  </div>
+                </td>
+              </tr>
+              {{/autos}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
